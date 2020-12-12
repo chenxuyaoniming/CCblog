@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Promise面试题 | TTblog</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <meta name="description" content="努力！奋斗！">
+    
+    <link rel="preload" href="/CCblog/assets/css/0.styles.44c529a9.css" as="style"><link rel="preload" href="/CCblog/assets/js/app.4cdf0038.js" as="script"><link rel="preload" href="/CCblog/assets/js/2.192a28f1.js" as="script"><link rel="preload" href="/CCblog/assets/js/18.e865ba35.js" as="script"><link rel="prefetch" href="/CCblog/assets/js/10.60ce97fb.js"><link rel="prefetch" href="/CCblog/assets/js/11.c8a812f4.js"><link rel="prefetch" href="/CCblog/assets/js/12.90c0b2db.js"><link rel="prefetch" href="/CCblog/assets/js/13.4ad1c42b.js"><link rel="prefetch" href="/CCblog/assets/js/14.71d11c13.js"><link rel="prefetch" href="/CCblog/assets/js/15.a8799add.js"><link rel="prefetch" href="/CCblog/assets/js/16.99018054.js"><link rel="prefetch" href="/CCblog/assets/js/17.685bf59c.js"><link rel="prefetch" href="/CCblog/assets/js/19.465e8cc5.js"><link rel="prefetch" href="/CCblog/assets/js/20.05734a84.js"><link rel="prefetch" href="/CCblog/assets/js/21.e7cbf4bd.js"><link rel="prefetch" href="/CCblog/assets/js/22.072fde8f.js"><link rel="prefetch" href="/CCblog/assets/js/23.103e485a.js"><link rel="prefetch" href="/CCblog/assets/js/24.0f44188e.js"><link rel="prefetch" href="/CCblog/assets/js/25.4c4c6001.js"><link rel="prefetch" href="/CCblog/assets/js/26.57e5fcb3.js"><link rel="prefetch" href="/CCblog/assets/js/27.3722d692.js"><link rel="prefetch" href="/CCblog/assets/js/28.24b2b0ca.js"><link rel="prefetch" href="/CCblog/assets/js/29.a83e5b51.js"><link rel="prefetch" href="/CCblog/assets/js/3.97444295.js"><link rel="prefetch" href="/CCblog/assets/js/30.1a9501ad.js"><link rel="prefetch" href="/CCblog/assets/js/31.b034868f.js"><link rel="prefetch" href="/CCblog/assets/js/32.a282086a.js"><link rel="prefetch" href="/CCblog/assets/js/33.57910a88.js"><link rel="prefetch" href="/CCblog/assets/js/34.01f79853.js"><link rel="prefetch" href="/CCblog/assets/js/35.164d2057.js"><link rel="prefetch" href="/CCblog/assets/js/36.b6fc1733.js"><link rel="prefetch" href="/CCblog/assets/js/37.eb781438.js"><link rel="prefetch" href="/CCblog/assets/js/38.911ed876.js"><link rel="prefetch" href="/CCblog/assets/js/39.f1270b54.js"><link rel="prefetch" href="/CCblog/assets/js/4.53d1bcb1.js"><link rel="prefetch" href="/CCblog/assets/js/40.1968095c.js"><link rel="prefetch" href="/CCblog/assets/js/41.372d89c3.js"><link rel="prefetch" href="/CCblog/assets/js/42.e3168acd.js"><link rel="prefetch" href="/CCblog/assets/js/43.a81ff38a.js"><link rel="prefetch" href="/CCblog/assets/js/44.76351a9e.js"><link rel="prefetch" href="/CCblog/assets/js/5.cc893d32.js"><link rel="prefetch" href="/CCblog/assets/js/6.063fcb7e.js"><link rel="prefetch" href="/CCblog/assets/js/7.9b25a714.js"><link rel="prefetch" href="/CCblog/assets/js/8.561f5ee3.js"><link rel="prefetch" href="/CCblog/assets/js/9.d2ae6ec0.js">
+    <link rel="stylesheet" href="/CCblog/assets/css/0.styles.44c529a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/CCblog/" class="home-link router-link-active"><!----> <span class="site-name">TTblog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/CCblog/aboutMe.html" class="nav-link">
+  个人介绍
+</a></div><div class="nav-item"><a href="/CCblog/face/teach.html" class="nav-link">
+  学习
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/CCblog/aboutMe.html" class="nav-link">
+  个人介绍
+</a></div><div class="nav-item"><a href="/CCblog/face/teach.html" class="nav-link">
+  学习
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/CCblog/" aria-current="page" class="sidebar-link">那一年，我变成了光</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/http" class="sidebar-heading clickable"><span>HTTP</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/css" class="sidebar-heading clickable"><span>CSS</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/js" class="sidebar-heading clickable"><span>JS</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/react" class="sidebar-heading clickable"><span>React</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/vue" class="sidebar-heading clickable"><span>Vue</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/webpack" class="sidebar-heading clickable"><span>Webpack</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/ts" class="sidebar-heading clickable"><span>TypeScript</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/alg" class="sidebar-heading clickable"><span>数据结构与算法</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/face" class="sidebar-heading clickable router-link-active open"><span>面试题</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/CCblog/face/" aria-current="page" class="sidebar-link">面试题</a></li><li><a href="/CCblog/face/promise.html" aria-current="page" class="active sidebar-link">Promise面试题</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="promise面试题"><a href="#promise面试题" class="header-anchor">#</a> Promise面试题</h3> <h4 id="promise执行顺序"><a href="#promise执行顺序" class="header-anchor">#</a> promise执行顺序</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token number">1</span>    <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'p1'</span><span class="token punctuation">)</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token number">2</span>    Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'p2'</span><span class="token punctuation">)</span>
+        <span class="token number">3</span>    Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'p3'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token number">4</span>    Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'p4'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token number">5</span>    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'then2'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token number">6</span>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'then1'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token number">7</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script'</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// p1</span>
+    <span class="token comment">// script</span>
+    <span class="token comment">// p2</span>
+    <span class="token comment">// then1</span>
+    <span class="token comment">// p3</span>
+    <span class="token comment">// p4</span>
+    <span class="token comment">// then2</span>
+    <span class="token comment">/**
+     * 1， 7是同步任务，所以会按顺序打印
+     * p1
+     * script
+     * 同时，将2. 6 推入当前的微任务队列，
+     * 1.7执行完之后之后会按顺序执行微任务2.6 所以打印出
+     * p2
+     * then1
+     * 在2执行之后，会将3.4, 5推入下一个执行栈的微任务队列, 所以之后会打印出
+     * p3
+     * p4
+     * **/</span>
+</code></pre></div><h4 id="promise执行机制-事件循环"><a href="#promise执行机制-事件循环" class="header-anchor">#</a> promise执行机制&amp;事件循环</h4> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> a<span class="token punctuation">;</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise3'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise4'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> b<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'after1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> a
+    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'after2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'end'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// promise1</span>
+<span class="token comment">// undefined</span>
+<span class="token comment">// end</span>
+<span class="token comment">// promise2</span>
+<span class="token comment">// promise3</span>
+<span class="token comment">// promise4</span>
+<span class="token comment">// Promise { pending }</span>
+<span class="token comment">// after1</span>
+<span class="token comment">/**
+ * 
+ * 第一个输出 promise1，是因为 Promise 里的方法
+即执行。接着调用 resolve，只不过 then 里的方法等下一个周期。
+  第二个输出 undefined，是因为立即执行执行 a 内部
+方法，先 console.log(a)，但此时的 a 还没赋值给左边的变量，所以只能是 undefined。然后 await b 就得等下一个周期执行了。
+  第三个输出 end，自然不意外。
+接着输出 promise2，promise3，promise4，是因为 await b 等待他执行完了，才轮到 a 内部继续执行。
+  之后输出 Promise { pending }，事件都进入了循
+了，a 已经被赋值成了 Promise 对象。所以第二遍 console.log(a)，自然就输出这个了。之后输出after1。
+ * **/</span>
+</code></pre></div><h4 id="promise实现最大并发请求数"><a href="#promise实现最大并发请求数" class="header-anchor">#</a> promise实现最大并发请求数</h4> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">function</span> <span class="token function">fetcher</span><span class="token punctuation">(</span><span class="token parameter">id <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> cb</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://127.0.0.1:5500?id=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+        method<span class="token operator">:</span> <span class="token string">'get'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> res<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+        <span class="token function">cb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">limitFetcher</span><span class="token punctuation">(</span><span class="token parameter">urlList<span class="token punctuation">,</span> limit</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> index <span class="token operator">=</span> limit<span class="token punctuation">;</span>
+    <span class="token keyword">let</span> length <span class="token operator">=</span> urlList<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">runNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&gt;=</span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">fetcher</span><span class="token punctuation">(</span>urlList<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> runNext<span class="token punctuation">)</span>
+        index <span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>limit<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">fetcher</span><span class="token punctuation">(</span>url<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> runNext<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * 思路：首次请求最大并发数，之后每完成一个请求，自动进行下一个请求，当请求数大于url数时，停止
+ * **/</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/CCblog/face/" class="prev router-link-active">
+        面试题
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/CCblog/assets/js/app.4cdf0038.js" defer></script><script src="/CCblog/assets/js/2.192a28f1.js" defer></script><script src="/CCblog/assets/js/18.e865ba35.js" defer></script>
+  </body>
+</html>

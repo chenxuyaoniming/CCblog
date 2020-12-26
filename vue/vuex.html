@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VUEX | TTblog</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <meta name="description" content="努力！奋斗！">
+    
+    <link rel="preload" href="/CCblog/assets/css/0.styles.c5b3c747.css" as="style"><link rel="preload" href="/CCblog/assets/js/app.bd6f0312.js" as="script"><link rel="preload" href="/CCblog/assets/js/2.192a28f1.js" as="script"><link rel="preload" href="/CCblog/assets/js/53.ea9c486f.js" as="script"><link rel="prefetch" href="/CCblog/assets/js/10.30ab2c95.js"><link rel="prefetch" href="/CCblog/assets/js/11.46aace47.js"><link rel="prefetch" href="/CCblog/assets/js/12.90c0b2db.js"><link rel="prefetch" href="/CCblog/assets/js/13.f5daf7b5.js"><link rel="prefetch" href="/CCblog/assets/js/14.8aed4f8c.js"><link rel="prefetch" href="/CCblog/assets/js/15.0745f4a7.js"><link rel="prefetch" href="/CCblog/assets/js/16.e51010f5.js"><link rel="prefetch" href="/CCblog/assets/js/17.b8296222.js"><link rel="prefetch" href="/CCblog/assets/js/18.2a416fb2.js"><link rel="prefetch" href="/CCblog/assets/js/19.2bca324d.js"><link rel="prefetch" href="/CCblog/assets/js/20.c34fb0a5.js"><link rel="prefetch" href="/CCblog/assets/js/21.03d271ea.js"><link rel="prefetch" href="/CCblog/assets/js/22.1379d94b.js"><link rel="prefetch" href="/CCblog/assets/js/23.6fbe9f55.js"><link rel="prefetch" href="/CCblog/assets/js/24.679ecba8.js"><link rel="prefetch" href="/CCblog/assets/js/25.85119d50.js"><link rel="prefetch" href="/CCblog/assets/js/26.e77e679b.js"><link rel="prefetch" href="/CCblog/assets/js/27.06201c91.js"><link rel="prefetch" href="/CCblog/assets/js/28.acf99ed1.js"><link rel="prefetch" href="/CCblog/assets/js/29.d2dfbaca.js"><link rel="prefetch" href="/CCblog/assets/js/3.2fb99d40.js"><link rel="prefetch" href="/CCblog/assets/js/30.a3b4c36b.js"><link rel="prefetch" href="/CCblog/assets/js/31.91a45add.js"><link rel="prefetch" href="/CCblog/assets/js/32.d5995399.js"><link rel="prefetch" href="/CCblog/assets/js/33.a8ecb2e0.js"><link rel="prefetch" href="/CCblog/assets/js/34.2bd90d94.js"><link rel="prefetch" href="/CCblog/assets/js/35.0537eec7.js"><link rel="prefetch" href="/CCblog/assets/js/36.02c6d6a5.js"><link rel="prefetch" href="/CCblog/assets/js/37.d55b1162.js"><link rel="prefetch" href="/CCblog/assets/js/38.0c591a6c.js"><link rel="prefetch" href="/CCblog/assets/js/39.1810af3c.js"><link rel="prefetch" href="/CCblog/assets/js/4.bcd058f4.js"><link rel="prefetch" href="/CCblog/assets/js/40.0a7a58e8.js"><link rel="prefetch" href="/CCblog/assets/js/41.2a053116.js"><link rel="prefetch" href="/CCblog/assets/js/42.b0523816.js"><link rel="prefetch" href="/CCblog/assets/js/43.00e0a440.js"><link rel="prefetch" href="/CCblog/assets/js/44.c06f3955.js"><link rel="prefetch" href="/CCblog/assets/js/45.0060ae0e.js"><link rel="prefetch" href="/CCblog/assets/js/46.a05a6029.js"><link rel="prefetch" href="/CCblog/assets/js/47.6cfdcd14.js"><link rel="prefetch" href="/CCblog/assets/js/48.e548102b.js"><link rel="prefetch" href="/CCblog/assets/js/49.6f32001c.js"><link rel="prefetch" href="/CCblog/assets/js/5.61982977.js"><link rel="prefetch" href="/CCblog/assets/js/50.4e0e2212.js"><link rel="prefetch" href="/CCblog/assets/js/51.6a8e5e7f.js"><link rel="prefetch" href="/CCblog/assets/js/52.63a8d4c2.js"><link rel="prefetch" href="/CCblog/assets/js/54.494d9537.js"><link rel="prefetch" href="/CCblog/assets/js/55.e7f33b9b.js"><link rel="prefetch" href="/CCblog/assets/js/56.65dcd01d.js"><link rel="prefetch" href="/CCblog/assets/js/6.a90e7406.js"><link rel="prefetch" href="/CCblog/assets/js/7.1a930758.js"><link rel="prefetch" href="/CCblog/assets/js/8.561f5ee3.js"><link rel="prefetch" href="/CCblog/assets/js/9.d02640d5.js">
+    <link rel="stylesheet" href="/CCblog/assets/css/0.styles.c5b3c747.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/CCblog/" class="home-link router-link-active"><!----> <span class="site-name">TTblog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/CCblog/aboutMe.html" class="nav-link">
+  个人介绍
+</a></div><div class="nav-item"><a href="/CCblog/vue/teach.html" class="nav-link">
+  学习
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/CCblog/aboutMe.html" class="nav-link">
+  个人介绍
+</a></div><div class="nav-item"><a href="/CCblog/vue/teach.html" class="nav-link">
+  学习
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/CCblog/" aria-current="page" class="sidebar-link">那一年，我变成了光</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/http" class="sidebar-heading clickable"><span>HTTP</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/html" class="sidebar-heading clickable"><span>HTML</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/css" class="sidebar-heading clickable"><span>CSS</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/js" class="sidebar-heading clickable"><span>JS</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/react" class="sidebar-heading clickable"><span>React</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/vue" class="sidebar-heading clickable router-link-active open"><span>Vue</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/CCblog/vue/" aria-current="page" class="sidebar-link">VUE框架</a></li><li><a href="/CCblog/vue/composition.html" class="sidebar-link">vue3.0 - composition api</a></li><li><a href="/CCblog/vue/defineProperty.html" class="sidebar-link">vue双向绑定原理</a></li><li><a href="/CCblog/vue/vueArray.html" class="sidebar-link">vue如何监听数组</a></li><li><a href="/CCblog/vue/vuex.html" aria-current="page" class="active sidebar-link">VUEX</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/webpack" class="sidebar-heading clickable"><span>Webpack</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/ts" class="sidebar-heading clickable"><span>TypeScript</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/alg" class="sidebar-heading clickable"><span>数据结构与算法</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/design" class="sidebar-heading clickable"><span>设计模式</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/CCblog/face" class="sidebar-heading clickable"><span>面试题</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="vuex"><a href="#vuex" class="header-anchor">#</a> VUEX</h3> <p>vue的全局状态管理器，当多个组件共享数据时，使用vuex会提升开发效率</p> <p>组成：</p> <ul><li><strong>state</strong> 数据仓库</li> <li><strong>getters</strong> 从state中派生出新的属性，并可对属性进行过滤</li> <li><strong>actions</strong> 异步获取数据，提交commit（matution方法）</li> <li><strong>matutions</strong> 唯一可以更改state的方法合集，必须是同步方法</li> <li><strong>module</strong> 将一个state,getters,actions,matutions分割成多个仓库,并集合起来，方便维护</li> <li><strong>辅助函数</strong> <ul><li>mapState</li> <li>mapGetters</li> <li>mapMutations</li> <li>mapActions</li></ul></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        state<span class="token operator">:</span> <span class="token punctuation">{</span>
+            userInfo<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        getters<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function-variable function">userId</span><span class="token operator">:</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>userInfo<span class="token punctuation">.</span>userId
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        matutions<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 触发 </span>
+            <span class="token comment">// store.commit('setUserInfo', info)</span>
+            <span class="token comment">// store.commit({type: 'setUserInfo', info: info})</span>
+            <span class="token comment">// 混入后 this.setUserInfo(info)</span>
+            <span class="token function">setUserInfo</span><span class="token punctuation">(</span><span class="token parameter">sate<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                state<span class="token punctuation">.</span>userInfo <span class="token operator">=</span> value<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        actions<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token comment">// commit 用来提交matutions更改state</span>
+            <span class="token comment">// 触发 store.dispatch('getUserInfo', data)</span>
+            <span class="token comment">// 使用辅助函数混入methods后：this.getUserInfo(data)</span>
+            <span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>commit<span class="token punctuation">,</span> state<span class="token punctuation">}</span><span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                Promise<span class="token punctuation">.</span><span class="token function">reslove</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                        <span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'setUserInfo'</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        modules<span class="token operator">:</span> <span class="token punctuation">{</span>
+            foo<span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token comment">// 注册全局命名空间</span>
+                namespaced<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                state<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    init<span class="token operator">:</span> <span class="token string">'true'</span><span class="token punctuation">,</span> <span class="token operator">=&gt;</span> <span class="token string">'foo.state.init'</span>
+                <span class="token punctuation">}</span>
+                actions<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    dosomething<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token comment">// 在命名空间模块内设置全局action方法</span>
+                        root<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                        <span class="token function-variable function">handler</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">namespacedContext<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/CCblog/vue/vueArray.html" class="prev">
+        vue如何监听数组
+      </a></span> <span class="next"><a href="/CCblog/webpack/">
+        webpack
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/CCblog/assets/js/app.bd6f0312.js" defer></script><script src="/CCblog/assets/js/2.192a28f1.js" defer></script><script src="/CCblog/assets/js/53.ea9c486f.js" defer></script>
+  </body>
+</html>
